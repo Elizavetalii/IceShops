@@ -1,0 +1,33 @@
+﻿<Window x:Class="IceShops.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IceShops"
+        mc:Ignorable="d"
+        MinHeight="550" MinWidth="650"
+        Title="Autorization" Height="550" Width="650">
+    <Grid Background="#FF464C8E">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="1" Content="Autorize" Grid.Row="3" FontFamily="Cascadia Code ExtraLight" FontSize="20" Foreground="#FF010105" BorderBrush="#FF584FCA" Margin="51,16,50,15" Background="#FF7F89DC" Cursor="Arrow" Click="Autorize_Click"/>
+        <TextBlock Grid.Column="1" TextWrapping="Wrap" Text="Ice Cream Shops" FontFamily="Cascadia Code ExtraLight" FontSize="48" TextAlignment="Center" Foreground="#FFC1C5ED" Margin="0,7,0,27"/>
+
+        <TextBox x:Name="Login" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" FontFamily="Microsoft Yi Baiti" FontSize="24" Background="#FF464C8E" Foreground="White" Margin="94,18,71,19" Cursor="Pen"/>
+        <PasswordBox x:Name="Password" Grid.Column="1" Margin="94,10,71,28" Grid.Row="2" SelectionOpacity="0.5" FontFamily="Microsoft Yi Baiti" FontStyle="Italic" FontSize="24" Background="#FF464C8E" Foreground="White" Cursor="Pen"/>
+        <TextBlock Grid.Column="1" Margin="23,37,0,38" Grid.Row="1" TextWrapping="Wrap" Text="LOGIN" FontFamily="Cascadia Code ExtraLight" Foreground="White" HorizontalAlignment="Left" Width="53" FontSize="16"/>
+        <TextBlock Grid.Column="1" Margin="9,26,339,44" Grid.Row="2" TextWrapping="Wrap" Text="PASSWORD" FontSize="16" Foreground="White" FontFamily="Cascadia Code ExtraLight" />
+
+
+    </Grid>
+</Window>

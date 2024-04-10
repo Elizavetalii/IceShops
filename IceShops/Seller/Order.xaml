@@ -1,0 +1,39 @@
+﻿<Page x:Class="IceShops.Seller.Order"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IceShops.Seller"
+      mc:Ignorable="d"
+      Title="Order"  d:DesignHeight="450" d:DesignWidth="900">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name ="DataGridProducts"  d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="4" Grid.Column="1" Grid.Row="1" />
+        <DataGrid x:Name="DataGridOrder" d:ItemsSource="{d:SampleData ItemCount=5}"  Grid.RowSpan="4"  Grid.Column ="3"  Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Text="All products" VerticalAlignment="Top" FontFamily="Cascadia Code ExtraLight" FontSize="22" Foreground="#FF74594E" Grid.Column="1" Margin="80,20,0,0"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Products on order. Full price:" FontFamily="Cascadia Code ExtraLight" FontSize="14" Foreground="#FF74594E" VerticalAlignment="Center"/>
+        <TextBox x:Name ="AmountBuyer" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="Amount paid by the buyer" FontFamily="Cascadia Code ExtraLight" FontSize="14" Foreground="#FF74594E" VerticalAlignment="Center" Width="260" Height="36" Margin="5,0,0,0" Grid.Column="1" GotFocus="AmountBuyer_GotFocus"/>
+        <Button x:Name="Save" Content="    Save the order   ~   Upload the receipt" HorizontalAlignment="Left" Margin="80,0,0,0" Grid.Row="6" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="36" Width="657" FontFamily="Cascadia Code ExtraLight" FontSize="22" Background="#FFF9F2E2" Grid.Column="1" Click="Save_Click"/>
+        <Button x:Name="Add" Grid.Column="2" Content="ADD"  Grid.Row="2" Background="#FFA1AB43" FontFamily="Cascadia Code ExtraLight" FontSize="22" Click="Add_Click" />
+        <Button x:Name="Delete" Grid.Column="2" Content="DELETE"  Grid.Row="3" FontFamily="Cascadia Code ExtraLight" FontSize="22" Background="#FFF7BFB9" FontWeight="Bold" Click="Delete_Click" />
+        <TextBlock x:Name="TotalPrice" Grid.Column="3" HorizontalAlignment="Left" Margin="261,0,0,0" TextWrapping="Wrap" Text="0" FontFamily="Cascadia Code ExtraLight" FontSize="15" Foreground="#FF74594E" VerticalAlignment="Center" Height="16" Width="89"/>
+
+    </Grid>
+</Page>
